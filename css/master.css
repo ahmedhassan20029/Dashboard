@@ -1,18 +1,97 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-    font-family: "Open Sans", sans-serif;
-    margin: 0;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/*PAGE*/
+.page {
+  background-color: #f1f5f9;
+  min-height: 100vh;
+}
+
+/*sidebar*/
+.sidebar {
+  width: 250px;
+  box-shadow: 0 0 10px #ddd;
+}
+@media (max-width: 767px) {
+  .sidebar {
+    width: 62px;
+    padding: 10px;
   }
-  *:focus {
-    outline: none;
+}
+.sidebar h3 {
+  margin-bottom: 50px;
+}
+.sidebar h3::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 2px;
+  background: black;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: -20px;
+}
+@media (max-width: 767px) {
+  .sidebar h3::before {
+    display: none;
   }
-  a {
-    text-decoration: none;
+}
+.sidebar h3::after {
+  content: "";
+  position: absolute;
+  background: black;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  bottom: -29px;
+  transform: translateX(-50%);
+  left: 50%;
+  border: 5px solid white;
+}
+@media (max-width: 767px) {
+  .sidebar h3::after {
+    display: none;
   }
-  ul {
-    list-style: none;
-    padding: 0;
+}
+.sidebar ul li a {
+  transition: 0.3s;
+  margin-bottom: 3px;
+}
+.sidebar ul li a:hover {
+  background-color: #f6f6f6;
+}
+.sidebar ul li .active {
+  background-color: #f6f6f6;
+}
+.sidebar ul li span {
+  font-size: 14px;
+  margin-left: 10px;
+}
+@media (max-width: 767px) {
+  .sidebar ul li span {
+    display: none;
   }
-  .page {
-    background-color: #f1f5f9;
-    min-height: 100vh;
-  }
+}
+
+/*sidebar*/
+
+/*# sourceMappingURL=master.css.map */
