@@ -1,6 +1,17 @@
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+  }
 /*margin & paddong*/
 .p-10 {
     padding: 10px;
+}
+.p-15 {
+    padding: 15px;
 }
 .p-20 {
     padding: 20px;
@@ -34,6 +45,11 @@
 .align-center {
     align-items: center;
 }
+.between-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 /*position*/
 .p-relative {
     position: relative;
@@ -44,4 +60,8 @@
 }
 .fs-14 {
     font-size: 14px;
+}
+/*grad*/
+.w-full {
+    width: 100%;
 }

@@ -1,4 +1,12 @@
 @import "_mixin.scss";
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+  }
 * {
     box-sizing: border-box;
   }
@@ -83,3 +91,58 @@ ul {
     }
 }
 /*sidebar*/
+/* Start Content */
+.content {
+    overflow: hidden;
+    .head {
+        .search {
+            &::before {
+            font-family: var(--fa-style-family-classic);
+            content: "\f002";
+            position: absolute;
+            border-radius: 50%;
+            font-weight: 900;
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 14px;
+            color: var(--grey-color);
+            }
+            input {
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                margin-left: 5px;
+                padding-left: 30px;
+                width: 160px;
+                transition: width 0.3s;
+                &:focus {
+                    width: 200px;
+                }
+                &:focus::placeholder {
+                    opacity: 0;
+                }
+            }
+        }
+        .icons {
+            .notification {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+                    background-color: var(--red-color);
+                    border-radius: 50%;
+                    right: -5px;
+                    top: -5px;
+                }
+            }
+            img {
+                width: 32px;
+                height: 32px;
+                margin-left: 15px;
+            }
+        }
+    }
+  }
+/* end Content */
