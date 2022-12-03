@@ -1,3 +1,4 @@
+@import "_mixin.scss";
 :root {
     --blue-color: #0075ff;
     --blue-alt-color: #0d69d5;
@@ -19,11 +20,27 @@
 .pt-20 {
     padding-top: 20px;
 }
+
+.m-20 {
+    margin: 0;
+}
 .m-20 {
     margin: 20px;
 }
 .mt-0 {
     margin-top: 0;
+}
+.mt-10 {
+    margin-top: 10px;
+}
+.ml-20{
+    margin-left: 20px;
+} 
+.mr-20 {
+    margin-right: 20px;
+} 
+.mb-20 {
+    margin-bottom: 20px;
 }
 /*back ground*/
 .bg-eee {
@@ -32,13 +49,26 @@
 .bg-white {
     background-color: white;
 }
+
 .c-black {
     color: black;
+}
+.c-grey {
+    color: var(--grey-color);
+}
+.c-white {
+    color: white;
+}
+.bg-blue {
+    background-color: var(--blue-color);
 }
 .red-6 {
     border-radius: 6px;
 }
-/*flex*/
+.rad-10 {
+    border-radius: 10px;
+}
+/*flex & grid*/
 .d-flex {
     display: flex;
 }
@@ -50,6 +80,34 @@
     align-items: center;
     justify-content: space-between;
 }
+.space-between {
+    justify-content: space-between;
+}
+.w-full {
+    width: 100%;
+}
+.w-fit {
+    width: fit-content;
+}
+.d-grid {
+    display: grid;
+}
+.gap-20 {
+    gap: 20px;
+}
+.d-block {
+    display: block;
+}
+.block-mobile {
+    @include screen(mobile) {
+        display: block;
+    }
+}
+.hide-mobile {
+    @include screen(mobile) {
+        display: none;
+    }
+}
 /*position*/
 .p-relative {
     position: relative;
@@ -58,10 +116,15 @@
 .txt-c {
     text-align: center;
 }
+.txt-c-mobile {
+    @include screen(mobile) {
+        text-align: center;
+    }
+}
 .fs-14 {
     font-size: 14px;
 }
-/*grad*/
-.w-full {
-    width: 100%;
+.btn-shape {
+    padding: 4px 10px;
+    border-radius: 6px;
 }

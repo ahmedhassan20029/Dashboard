@@ -29,10 +29,26 @@ ul {
   padding: 0;
 }
 
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--blue-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--blue-alt-color);
+}
+
 /*PAGE*/
 .page {
   background-color: #f1f5f9;
-  min-height: 100vh;
+  min-height: 200vh;
 }
 
 /*sidebar*/
@@ -48,6 +64,13 @@ ul {
 }
 .sidebar h3 {
   margin-bottom: 50px;
+}
+@media (max-width: 767px) {
+  .sidebar h3 {
+    font-size: 10px;
+    margin-top: 50%;
+    margin-bottom: 0px;
+  }
 }
 .sidebar h3::before {
   content: "";
@@ -148,7 +171,79 @@ ul {
   height: 32px;
   margin-left: 15px;
 }
-
+.content h1 {
+  margin: 20px 20px 40px;
+}
+.content h1::after, .content h1::before {
+  content: "";
+  height: 3px;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+}
+.content h1::before {
+  background-color: white;
+  width: 120px;
+}
+.content h1::after {
+  background-color: black;
+  width: 40px;
+}
+.content .wrapper {
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+}
+@media (max-width: 767px) {
+  .content .wrapper {
+    grid-template-columns: minmax(200px, 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10px;
+  }
+}
+.content .wrapper .welcome {
+  overflow: hidden;
+}
+.content .wrapper .welcome .intro img {
+  width: 200px;
+  margin-bottom: -10px;
+}
+@media (max-width: 767px) {
+  .content .wrapper .welcome .intro img {
+    padding-bottom: 30px;
+  }
+}
+.content .wrapper .welcome .avatar {
+  width: 64px;
+  height: 64px;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 2px;
+  box-shadow: 0 0 5px #ddd;
+  margin-left: 20px;
+  margin-top: -32px;
+}
+@media (max-width: 767px) {
+  .content .wrapper .welcome .avatar {
+    margin-left: 0;
+  }
+}
+.content .wrapper .welcome .body {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+.content .wrapper .welcome .body div {
+  flex: 1;
+}
+.content .wrapper .welcome .body div::not(::last-child) {
+  margin-bottom: 20px;
+}
+.content .wrapper .welcome .visit {
+  margin: 0 15px 15px auto;
+  transition: 0.3s;
+}
+.content .wrapper .welcome .visit::hover {
+  background-color: var(--blue-alt-color);
+}
+/* End Welcome Widget */
 /* end Content */
-
 /*# sourceMappingURL=master.css.map */
